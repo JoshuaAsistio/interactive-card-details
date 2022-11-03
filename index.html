@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <link rel="stylesheet" href="css/bootstrap-5.0.2-dist/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div class="desktop-bg"></div>
+    <div class="violet-bg"></div>
+    <!-- FORM -->
+    <form action="#" id="form">
+      <div class="row">
+        <div class="col-s-12">
+          <label for="input-user">CARDHOLDER NAME</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-s-12">
+          <input
+            type="text"
+            placeholder="e.g. jane Appleseed"
+            id="input-user"
+          />
+          <p class="error-message" id="cardholder-name-error"></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-s-12">
+          <label for="user">CARD NUMBER</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-s-12">
+          <input
+            type="text"
+            placeholder="e.g. 1234 5678 9123 0000"
+            id="input-card-number"
+          />
+          <p class="error-message" id="card-number-error"></p>
+        </div>
+      </div>
+
+      <label for="date">EXP. DATE (MM/YY) CVC</label>
+      <div id="date">
+        <input type="text" id="month" placeholder="MM" />
+        <input type="text" id="year" placeholder="YY" />
+        <input type="text" id="cvc" placeholder="e.g. 123" />
+
+        <p class="error-message" id="expdate-error"></p>
+      </div>
+
+      <button id="confirm" class="btn">Confirm</button>
+    </form>
+    <!---------------------------------------------------------->
+
+    <!-- COMPLETE STATE -->
+    <div class="complete-state hide" id="complete-state">
+      <img src="images\icon-complete.svg" alt="" />
+      <p class="normal-weight text-center" aria-hidden="true">THANK YOU!</p>
+      <p class="text-center" aria-hidden="true">
+        We've added your card details
+      </p>
+      <button class="btn" aria-hidden="true" id="continue-button">
+        Continue
+      </button>
+    </div>
+    <!---------------------------------------------------------->
+
+    <!-- FRONT CARD -->
+    <div class="front-card">
+      <img src="images\card-logo.svg" alt="" />
+      <p id="card-number">0000 0000 0000 0000</p>
+      <div class="flex space-between" id="user-and-date">
+        <p id="user">JANE APPLESEED</p>
+        <p id="date">
+          <span id="exp-month">00</span>/<span id="exp-year">00</span>
+        </p>
+      </div>
+    </div>
+    <!---------------------------------------------------->
+
+    <!-- BACK CARD -->
+    <div class="back-card">
+      <p id="number">000</p>
+    </div>
+    <!---------------------------------------------------------->
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Joshua Asistio</a>.
+    </div>
+  </body>
+</html>
