@@ -1,0 +1,240 @@
+@import url('variables.css');
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  height: max-content;
+  overflow-x: hidden;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.violet-bg {
+  min-height: 240px;
+  width: 100vw;
+  background-image: url('../images/bg-main-mobile.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 93px;
+}
+
+/* FRONT CARD */
+.front-card {
+  background-image: url('../images/bg-card-front.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 157px;
+  padding: 20px;
+  width: 285px;
+  border-radius: 10px;
+  position: absolute;
+  left: 15px;
+  top: 125px;
+  color: var(--white);
+  z-index: 1;
+}
+
+ div.front-card img {
+  margin-bottom: 25px;
+}
+
+#card-number {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+#user-and-date {
+  margin-bottom: 3px;
+  font-size: 7px;
+}
+/*------------------------------------------------------------*/
+
+/*BACK CARD*/
+.back-card {
+  min-height: 157px;
+  width: 285px;
+  background-image: url('../images/bg-card-back.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 32px;
+  left: 46px;
+  z-index: 0;
+}
+
+.back-card p {
+  position: absolute;
+  top: 68px;
+  left: 228px;
+  font-size: 12px;
+  color: var(--white);
+}
+/*-------------------------------------------------------------*/
+
+/* FORM */
+input {
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--light-grayish-violet);
+  font-size: 14px;
+}
+
+div.row div label {
+  margin-left: 23px;
+}
+
+.row:not(:last-of-type) {
+  margin-bottom: 13px;
+}
+
+div.row input, 
+div#date input#month {
+  width: 325px;
+  margin-left: 23px;
+}
+
+label:not(div > label) {
+  margin-bottom: 13px;
+  margin-left: 23px;
+}
+
+div#date input#month {
+  margin-right: 9px;
+}
+
+div#date input#month,
+div#date input#year {
+  width: 70px;
+}
+
+div#date input#year {
+  margin-right: 12px;
+}
+
+div#date input#cvc {
+  width: 155px;
+}
+
+.error-message {
+  color: var(--input-error);
+  font-size: 12px;
+  margin-left: 23px;
+}
+/*---------------------------------------------------------------*/
+
+/* BUTTON */
+.btn {
+  width: 325px;
+  margin-left: 23px;
+  margin-top: 28px;
+  background-color: var(--very-dark-violet);
+  color: var(--white);
+  margin-bottom: 82px;
+}
+/*---------------------------------------------------------------*/
+
+/* COMPLETE STATE */
+div#complete-state img {
+  margin-left: 148px;
+  margin-bottom: 43px;
+}
+
+.normal-weight {
+  font-weight: var(--normal-text);
+}
+
+div#complete-state p:nth-of-type(1) {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+div#complete-state p:nth-of-type(2) {
+  color: var(--dark-grayish-violet);
+}
+/*---------------------------------------------------------------*/
+
+/* LARGE SCREENS */
+@media (min-width: 768px) {
+  .violet-bg {
+    display: none;
+  }
+
+  .desktop-bg {
+    height: 900px;
+    width: 485px;
+    background-image: url('../images/bg-main-desktop.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .front-card {
+    left: 165px;
+    top: 187px;
+    width: 446px;
+    min-height: 245px;
+    padding: 28px;
+  }
+
+  div.front-card img {
+    margin-bottom: 70px;
+  }
+
+  #card-number {
+    font-size: 20px;
+  }
+
+  #user-and-date {
+    font-size: 14px;
+  }
+
+  .back-card {
+    left: 258px;
+    top: 470px;
+    min-height: 245px;
+    width: 447px;
+  }
+
+  .back-card p {
+    top: 112px;
+    left: 357px;
+    font-size: 14px;
+  }
+
+  form {
+    position: absolute;
+    top: 280px;
+    left: 845px;
+  }
+
+  div#complete-state {
+    position: absolute;
+    top: 280px;
+    left: 845px;
+  }
+}
